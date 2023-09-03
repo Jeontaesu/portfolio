@@ -1,0 +1,425 @@
+.blind {
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin:-1px;
+}
+
+#wrapper, .App-main{
+    position: relative;
+    z-index: 800;
+}
+.common-inner{
+    padding-left:5%;
+    padding-right:3.75%;
+    width: 100%;
+
+    @include largeTablet{
+        padding-left:3.9101vw;
+        padding-right:3.9101vw;
+    }
+
+    @include largeMobile{
+        padding-left:6.25%;
+        padding-right:6.25%;
+    }
+
+}
+
+/* header 공통 */
+.header-main, .linkRoll-char, .works-txt-item > div , .works-txt-mo , .foot-copy{
+    background:$color-white;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.logo , .works-txt-item {
+    font-size:var(--font-size-lg);
+    letter-spacing:0.0250vw;
+    font-weight:500;
+    transition:all .3s;
+}
+
+
+/* 버튼 공통 */
+.Button {
+    all:unset;
+    cursor:pointer;
+    display: inline-flex;
+    position: relative;
+    user-select:none;
+    vertical-align:middle;
+}
+.btn-arrow-wrap , .btn-icon {
+    align-items: center;
+    justify-content: center;
+}
+/* linkRoll */
+.linkRoll{
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    transition:opacity .3s cubic-bezier(.68,0,.1,1); 
+    // 일단 기존 사이트꺼 그대로 가져옴
+
+    &-text{
+        position: relative;
+        display: flex;
+    }
+    &-char{
+        display: inline-block;
+        position: relative;
+        
+    }
+}
+/* link-txt */
+.link-txt{
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    transition:opacity .3s cubic-bezier(.68,0,.1,1); 
+
+    &:after{
+        content:"";
+        position: absolute;
+        inset:auto 0 .125rem 0;
+        border:1px solid #111; 
+        transition:opacity 1.3s cubic-bezier(.68,0,.1,1);
+    }
+}
+
+.link-txt-hover{display: none;}
+
+/* grid 영역잡기 */
+.grid{
+    display: grid;
+    grid-template-columns:repeat(12,1fr);
+}
+
+img{
+    height:auto;
+    vertical-align:middle;
+    color:transparent;
+}
+
+
+//sc-project - .frame-project 공통
+.sc-project{
+    background: $color-cream;
+    box-shadow:inset 0 -1px 0 #000;
+    height:55vw;
+    position: relative;
+    overflow: hidden;
+    transition:all .3s;
+
+    @include largeDesktop{
+        height:54.9715vw; // 868
+    }
+    @include layDesktop {
+        height:67.4276vw; // 768
+    }
+    @include largeTablet{
+        height: 75.0735vw; // 768
+    }
+    @include mediumTablet{
+        height:85.4283vw; //768
+    }
+    @include largeMobile{
+        height:100.0000vw; // 768
+    }
+    @include smallMobile{
+        height:110.2296vw; // 529 
+    }
+
+
+    .frame-project{
+        .project-inner{
+            min-height:100vh;
+
+            & > *{
+                position: absolute;
+                inset:0;
+            }
+            .project-title{
+                z-index:3;
+                overflow: hidden;
+
+                @include largeTablet{
+                    &.common-inner{padding-right:0;}
+                }
+
+                .title{
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    bottom:-2.4375rem;
+
+                    margin-bottom: 0;
+                    margin-left: -1.8750vw;
+                    white-space:nowrap;
+                    font-size:clamp(1.25rem,1.25rem + 20vw,62.4375rem);
+                    line-height:1;
+                    letter-spacing:-1.6250vw;
+                    user-select: none;
+                    height: 25%;
+
+                   @include largeTablet{
+                        bottom:3rem;
+                   }
+                   @include mediumTablet{
+                        bottom:2rem;
+                   }
+                   @include largeMobile{
+                    font-size:clamp(1.25rem,1.25rem + 19vw,62.4375rem);
+                   }
+                   @include mediumMobile{
+                    font-size:clamp(1.25rem,1.25rem + 18vw,62.4375rem);
+                   }
+
+                   .scroll-title{
+                        position: relative;
+                        display:block;
+                   }
+
+                }
+            }
+            .project-visual{
+                gap:3.7500vw; //3rem
+                row-gap:0;
+                z-index:3;
+
+                @include largeTablet{
+                    gap:4.6921vw;
+                }
+
+                .project-figure{
+                    position: relative;
+
+                    &:before{
+                        content:"";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        opacity:0.05;
+                        
+                    }
+                
+                    .project-img{
+                        position: absolute;
+                        transition:all .3s;
+                    }
+                }
+
+                .project-content{
+                    letter-spacing:.1px;
+                    display: grid;
+                    gap: 3.6rem;
+                    place-items:start;
+                    position: relative;
+                    font-family:'pretendard';
+
+                    @include largeTablet{
+                        display: none;
+                    }
+
+                    .content-title{
+                        margin-bottom: -2.6rem;
+                        font-size:var(--font-size-lg);
+                        font-weight:bold;
+                        line-height:1.3;
+                        
+                    }
+                    .content-txt{
+                        font-size:var(--font-size-sm-2);
+                        line-height:1.3333;
+                        text-wrap:balance;
+                        font-weight:500;
+
+                        // @include layDesktop{
+                        //     font-size:1.3169vw;
+                        // }
+                    }
+                    .btn-enter{
+                        margin-top: 3.6rem;
+                        border:2px solid transparent;
+                        padding:40px 16px 12.8px 8px;
+                        border-radius:.2rem;
+                        transform:scale(1.5);
+                        transform-origin:bottom left;
+                        transition:all .3s;
+
+                        @include largeDesktop{
+                            transform:scale(1.1);
+                            margin-top:0;
+                        }
+                        @include betweenDesktop{
+                            transform:scale(1.0);
+                        }
+
+
+                        .btn-arrow{
+                            display: flex;
+                            align-items: flex-start;
+                            overflow: hidden;
+                            padding-bottom: 0.5rem;
+                            padding-left: 0.5rem;
+                            position: relative;
+                            z-index: 2;
+
+                            .Button-arrow-svg{
+                                width: 34px;
+                                height: 37px;
+                                
+                                .Button-arrow-path{
+                                    fill:transparent;
+                                    stroke:#000;
+                                    stroke-width:2px;
+                                }
+                            }
+                            .Button-arrow-svg--out{
+                                position: absolute;
+                                top: 0;
+                            }
+                            .btn-pointer{
+                                background: url(../images/enter-arrow.svg)no-repeat;
+                                width: 18px;
+                                height: 16px;
+                                position: absolute;
+                                top: 0;
+                                left: 0.5rem;
+                                offset-path:path("M1 0V28C1 30.7614 3.23858 33 6 33H37");
+                                
+                                offset-distance:0%;
+                            }
+                            .btn-pointer-out{
+                                offset-distance:95%;
+                                transform:none;
+                            }
+                        }
+
+                        .btn-bg, .btn-bg-hover{
+                            border-radius:4px 4px 4px 16px;
+                            position: absolute;
+                            inset:-2px;    
+                        }
+                        .btn-bg{
+                            background: $color-cream;
+                            border:2px solid #000;
+                            z-index: 1;
+                            transition:all .3s;
+                        }
+                        .btn-bg-hover{
+                            background: #000;
+                            transition:all .3s;
+                        }
+
+                        &:hover .btn-bg{
+                            background: #fff;
+                        }
+                        &:hover .btn-bg-hover{
+                            transform:translateX(0.5rem) translateY(0.5rem) translateZ(0px);
+                        }
+                    }
+                }
+            }
+            .project-view{
+                inset:auto 0 3% 0;
+                gap:1.875%;
+                z-index:4;
+                display: none;
+
+                @include largeTablet{
+                    display: grid;
+                }
+                @include mediumMobile{
+                    inset:auto 0 5.5109vw 0;
+                }
+
+                .view-wrap{
+                    grid-column:12;
+
+                    .link-view{
+                        display: inline-flex;
+                        align-items:center;
+                        position: relative;
+                        transition:opacity .3s cubic-bezier(.68,0,.1,1);
+
+                        font-size:var(--font-size-lg);
+                        font-weight:500;
+                        line-height:1.75;
+                        padding-right: 2.5rem;
+                        letter-spacing:.1px;
+                        
+                        
+                        .link-word{
+                            display: block;
+                        }
+                        .link-word-hover{
+                            position: absolute;
+                            display: none;
+                        }
+
+                        .link-icon{
+                            width:2.5000vw;
+                            height:2.5000vw;
+
+                            @include largeMobile{
+                                width:4.1721vw;
+                                height:4.1721vw;
+                            }
+                            @include smallMobile{
+                                width:6.6806vw;
+                                height:6.6806vw;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .stamp{
+                display: grid;
+                place-items:center;
+                
+
+                .stamp-inner{
+                    position: relative;
+                    width: 26.0417vw;
+                    height:26.0417vw;
+                    
+                    @include layDesktop{
+                        width:29.9045vw;
+                        height:29.9045vw;
+                    }
+                    @include smallMobile{
+                        width:38.0835vw;
+                        height:38.0835vw;
+                    }
+
+                    .link-stamp{
+                        display: block;
+                        cursor:pointer;
+                        transform:none;
+
+                        &:hover {tansform:scale(1.1);}
+                        
+                        .stamp-img{
+                            animation: rotation 10s linear infinite;
+                        }
+                        @keyframes rotation {
+                            0% { transform: rotate(0deg); }
+                            100% { transform: rotate(360deg); }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.gnb{
+    display: flex;
+    margin-right:2%;
+
+    @include largeMobile{
+        display: none;
+    }
+
+    .gnb-item {
+        position: relative;
+        overflow: hidden;
+        font-size:1.5000vw;
+        font-weight:500;
+        letter-spacing: 0.01rem;
+        
+
+        + .gnb-item {
+           margin-left: 20%;
+        }
+
+    }
+}
