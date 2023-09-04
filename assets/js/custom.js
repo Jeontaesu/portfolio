@@ -16,7 +16,7 @@ $(function(){
           translateZ: 0,
           opacity: [0, 1],
           easing: "easeOutExpo",
-          duration: 1100,
+          duration: 600,
           delay: function(el, i) {
               return 500 + 50 * i;
           }
@@ -26,14 +26,14 @@ $(function(){
           translateX: [0, -140],
           opacity: [1, 0],
           easing: "easeInExpo",
-          duration: 900,
+          duration: 700,
           delay: function(el, i) {
               return 700 + 50 * i;
           }
       });
 
   TweenMax.to(".loader", 2.2, {
-      delay: 3,
+      delay: 1.3,
       top: "-100%",
       ease: Expo.easeInOut
   });

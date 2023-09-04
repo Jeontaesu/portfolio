@@ -38,9 +38,13 @@
 
         .intro-title{
             font-size: 124px;
-            text-transform: uppercase;
-            font-weight: 200;
+            
+            font-weight: 400;
             color: #fff;
+
+            @include betweenDesktop {
+                font-size:8.1046vw;
+            }
            
             .letter {
                 display: inline-block;

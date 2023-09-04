@@ -942,9 +942,13 @@ img {
 }
 .loader .intro .intro-title {
   font-size: 124px;
-  text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
   color: #fff;
+}
+@media (max-width: 1527px) {
+  .loader .intro .intro-title {
+    font-size: 8.1046vw;
+  }
 }
 .loader .intro .intro-title .letter {
   display: inline-block;
