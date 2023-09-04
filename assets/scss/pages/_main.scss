@@ -1,9 +1,3 @@
-// #wrap{
-//     border:1px solid red;
-//     height:$vh;
-// }
-
-
 //임시
 .works-txt-mo {display: none;}
 .loading-page {display: none;}
@@ -39,8 +33,7 @@
         .intro-title{
             font-size: 124px;
             
-            font-weight: 400;
-            color: #fff;
+            font-weight: 400; 
 
             @include betweenDesktop {
                 font-size:8.1046vw;
