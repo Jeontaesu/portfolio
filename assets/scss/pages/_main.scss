@@ -58,33 +58,6 @@
                 position: relative;
                 height:100%;
 
-                .about-mo{
-                    display: none;
-                    position: absolute;
-                    top:50%;
-                    transform:translateY(-50%);
-                    margin-left: -0.25rem;
-
-                   
-                    @include mediumMobile{
-                        display: block;
-                    }
-                 
-                    .link-about{
-                        transform:rotate(-180deg);
-                        writing-mode:vertical-rl;
-                        
-                        .link-txt{
-                            font-size:var(--font-size-sm-1);
-                            letter-spacing:0.05vw;
-                        }
-
-                        .link-txt:after{
-                            content:"";
-                            inset:0 auto 0 0;
-                        }
-                    }
-                }
                 .about{
                     // max-width:35ch;
                     max-width:26.302%;

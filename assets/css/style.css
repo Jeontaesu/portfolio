@@ -978,34 +978,6 @@ img {
   position: relative;
   height: 100%;
 }
-.App-main .sc-project.project-1st .frame-about .about-mo {
-  display: none;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin-left: -0.25rem;
-}
-@media (max-width: 600px) {
-  .App-main .sc-project.project-1st .frame-about .about-mo {
-    display: block;
-  }
-}
-.App-main .sc-project.project-1st .frame-about .about-mo .link-about {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-}
-.App-main .sc-project.project-1st .frame-about .about-mo .link-about .link-txt {
-  font-size: var(--font-size-sm-1);
-  letter-spacing: 0.05vw;
-}
-.App-main .sc-project.project-1st .frame-about .about-mo .link-about .link-txt:after {
-  content: "";
-  inset: 0 auto 0 0;
-}
 .App-main .sc-project.project-1st .frame-about .about {
   max-width: 26.302%;
   position: absolute;
