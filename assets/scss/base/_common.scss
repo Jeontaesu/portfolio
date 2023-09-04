@@ -58,39 +58,38 @@
 }
 /* linkRoll */
 .linkRoll{
-    display: inline-flex;
+    display:inline-flex;
     overflow: hidden;
-    position: relative;
-    transition:opacity .3s cubic-bezier(.68,0,.1,1); 
-    // 일단 기존 사이트꺼 그대로 가져옴
 
-    &-text{
-        position: relative;
-        display: flex;
-    }
     &-char{
-        display: inline-block;
-        position: relative;
-        
+        display:inline-block;
     }
-}
-/* link-txt */
-.link-txt{
-    display: inline-flex;
-    overflow: hidden;
-    position: relative;
-    transition:opacity .3s cubic-bezier(.68,0,.1,1); 
-
-    &:after{
-        content:"";
-        position: absolute;
-        inset:auto 0 .125rem 0;
-        border:1px solid #111; 
-        transition:opacity 1.3s cubic-bezier(.68,0,.1,1);
+    &:hover span {
+        animation: .3s cubic-bezier(.25, .25, .25, 1.15) pulse;  
+        animation-delay: calc(var(--index) * 0.03s);
     }
 }
 
-.link-txt-hover{display: none;}
+@keyframes pulse {
+    0% {
+   //   background: $tile-bg;
+      transform: translateY(0);
+    }
+    
+    50% {
+  // background: darken($tile-bg, 10%);
+      transform: translateY(-200%);
+    }
+    51% {
+  // background: darken($tile-bg, 10%);
+      transform: translateY(100%);
+    }
+    
+    100% {
+  // background: $tile-bg;
+      transform: translateY(0);
+    }
+  }
 
 /* grid 영역잡기 */
 .grid{

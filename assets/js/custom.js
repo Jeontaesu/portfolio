@@ -39,6 +39,23 @@ $(function(){
   });
 
 
+  /**
+   * @header_btn_wrap 아래로 이동
+   */
+//   $('.header-btn-wrap').click(function(){
+//     $('html, body').scrollTop($(document).height());
+//   })
+
+$('.header-btn-wrap').click(function(){
+
+    var offset = $('.header-btn-wrap').offset(); //선택한 태그의 위치를 반환
+
+        //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+
+    $('html').animate({scrollTop : offset.top}, 400);
+
+});
+
 
 /**
  * @scroll_title 이벤트
