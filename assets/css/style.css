@@ -483,7 +483,7 @@ img {
 }
 @media (max-width: 600px) {
   .sc-project .frame-project .project-inner .project-view {
-    inset: auto 0 5.5109vw 0;
+    inset: auto 0 2.5109vw 0;
   }
 }
 .sc-project .frame-project .project-inner .project-view .view-wrap {
