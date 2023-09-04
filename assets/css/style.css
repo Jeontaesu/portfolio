@@ -942,6 +942,7 @@ img {
 }
 .loader .intro .intro-title {
   font-size: 124px;
+  color: #fff;
   font-weight: 400;
 }
 @media (max-width: 1527px) {
