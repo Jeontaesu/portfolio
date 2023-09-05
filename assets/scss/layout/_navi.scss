@@ -2,18 +2,27 @@
     display: flex;
     margin-right:2%;
 
-    @include largeMobile{
-        display: none;
-    }
-
     .gnb-item {
         position: relative;
         overflow: hidden;
-        font-size:1.5000vw;
+        font-size:var(--font-size-md-2);
         font-weight:500;
         letter-spacing: 0.01rem;
-        
 
+        @include largeMobile{
+            font-weight:600;
+            font-family:Helvetica Neue,Arial,sans-serif;
+
+            .linkAbout {
+                display: none;
+            }
+            .linkContact{
+                box-shadow:inset 0 0 0 .2rem $color-white;
+                border-radius:50%;
+                padding: 8px;
+            }
+        }
+    
         + .gnb-item {
            margin-left: 20%;
         }

@@ -40,8 +40,9 @@ $(function(){
 
 
   /**
-   * @header_btn_wrap 아래로 이동
+   * @header_btn_wrap링크
    */
+  
 $('.header-btn-wrap').click(function(){
 
     var offset = $('.header-btn-wrap').offset(); //선택한 태그의 위치를 반환
@@ -50,6 +51,29 @@ $('.header-btn-wrap').click(function(){
     //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
 
 });
+
+/**
+ * @gnb_링크
+ */
+
+$('.gnb-item .linkAbout').click(function(e){
+    e.preventDefault();
+
+    var position = $('.about').offset(); //선택한 태그의 위치를 반환
+    $('html').animate({scrollTop : position.top}, 500);
+    //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+
+});
+$('.gnb-item .linkContact').click(function(e){
+    e.preventDefault();
+
+    var position = $('.footer').offset(); //선택한 태그의 위치를 반환
+    $('html').animate({scrollTop : position.top}, 500);
+    //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+
+});
+
+
 
 
 /**

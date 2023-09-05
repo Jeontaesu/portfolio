@@ -47,15 +47,11 @@
 
         .foot-menu{
             display: flex;
-            gap:0.5rem;
+            gap:2rem;
 
             @include largeMobile{
                 flex-direction:column;
                 gap:0.125rem;
-            }
-
-            .linkRoll{
-                
             }
         }
         .foot-copy{

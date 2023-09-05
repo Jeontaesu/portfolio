@@ -40,6 +40,10 @@
     letter-spacing:0.0250vw;
     font-weight:500;
     transition:all .3s;
+
+    @include largeMobile{
+        font-weight:600;
+    }
 }
 
 
