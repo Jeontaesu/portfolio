@@ -340,7 +340,7 @@ img{
                     display: grid;
                 }
                 @include mediumMobile{
-                    inset:auto 0 2.5109vw 0;
+                    inset:auto 0 1vw 0;
                 }
 
                 .view-wrap{
@@ -362,11 +362,6 @@ img{
                         .link-word{
                             display: block;
                         }
-                        .link-word-hover{
-                            position: absolute;
-                            display: none;
-                        }
-
                         .link-icon{
                             width:2.5000vw;
                             height:2.5000vw;

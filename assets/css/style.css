@@ -40,7 +40,7 @@
   -moz-tab-size: 4;
   -o-tab-size: 4;
      tab-size: 4;
-  --font-size-lg: clamp(1.7rem,1.8750vw,3.6rem);
+  --font-size-lg: clamp(1.7rem,3.8750vw,3.6rem);
   --font-size-md-1: clamp(1.7rem,0.8333vw,3rem);
   --font-size-md-2: clamp(1.6rem,1.5224vw,3rem);
   --font-size-sm-1: clamp(1.5rem, 2.6711vw, 2.5rem);
@@ -498,7 +498,7 @@ img {
 }
 @media (max-width: 600px) {
   .sc-project .frame-project .project-inner .project-view {
-    inset: auto 0 2.5109vw 0;
+    inset: auto 0 1vw 0;
   }
 }
 .sc-project .frame-project .project-inner .project-view .view-wrap {
@@ -522,10 +522,6 @@ img {
 }
 .sc-project .frame-project .project-inner .project-view .view-wrap .link-view .link-word {
   display: block;
-}
-.sc-project .frame-project .project-inner .project-view .view-wrap .link-view .link-word-hover {
-  position: absolute;
-  display: none;
 }
 .sc-project .frame-project .project-inner .project-view .view-wrap .link-view .link-icon {
   width: 2.5vw;
