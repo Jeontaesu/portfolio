@@ -428,7 +428,8 @@
                             width:75.7018vw;
                         }
                         @include largeMobile{
-                            width:75.7018vw;
+                            inset:3rem -50vw 0 auto;
+                            width:80.7018vw;
                         }
                     }
                 }
@@ -441,7 +442,7 @@
 
             .stamp{
                 .stamp-inner{
-                    inset:0 0 0 -3.5vw;
+                    inset:-5rem 0 0 -25vw;
                 }
             }
         }
