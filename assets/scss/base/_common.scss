@@ -175,6 +175,7 @@ img{
                    }
                    @include largeMobile{
                     font-size:clamp(1.25rem,1.25rem + 19vw,62.4375rem);
+                    bottom:3.5rem;
                    }
                    @include mediumMobile{
                     font-size:clamp(1.25rem,1.25rem + 18vw,62.4375rem);
@@ -357,7 +358,6 @@ img{
                         }
                     }
             }
-
             .stamp{
                 display: grid;
                 place-items:center;
