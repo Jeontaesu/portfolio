@@ -416,28 +416,20 @@
 
                     .project-img{
                         inset:-1rem -35vw 0 auto;
-                        width:27.5000vw;
+                        width:65.5833vw;
 
                         @include layDesktop{
-                            width:30.904vw;
+                            width:75.7018vw;
                         }
                         @include largeTablet{
-                            width:34.4089vw;
+                            width:75.7018vw;
                         }
                         @include mediumTablet{
-                            width:39.1546vw;
+                            width:75.7018vw;
                         }
                         @include largeMobile{
-                            width:45vw;
+                            width:75.7018vw;
                         }
-                    }
-                    .project-img-btm{
-                        inset:auto -1.5rem 6rem auto;
-
-                        @include mediumMobile{
-                            inset:auto -0.9rem 4rem auto;
-                        }
-
                     }
                 }
             }

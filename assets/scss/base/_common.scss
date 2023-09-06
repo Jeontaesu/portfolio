@@ -157,8 +157,7 @@ img{
                     display: flex;
                     align-items: center;
                     position: absolute;
-                    bottom:-2.4375rem;
-
+                    bottom:-1.4375rem;
                     margin-bottom: 0;
                     margin-left: -1.8750vw;
                     white-space:nowrap;
@@ -332,53 +331,31 @@ img{
             }
             .project-view{
                 inset:auto 0 3% 0;
-                gap:1.875%;
                 z-index:4;
                 display: none;
 
                 @include largeTablet{
-                    display: grid;
+                    display: block;
                 }
                 @include mediumMobile{
                     inset:auto 0 1vw 0;
                 }
-
-                .view-wrap{
-                    grid-column:12;
-
                     .link-view{
-                        display: inline-flex;
+                        display: flex;
                         align-items:center;
+                        justify-content:flex-end;
                         position: relative;
                         transition:opacity .3s cubic-bezier(.68,0,.1,1);
-
                         font-size:var(--font-size-lg);
                         font-weight:500;
                         line-height:1.75;
-                        padding-right: 2.5rem;
                         letter-spacing:.1px;
                         
-                        
-                        .link-word{
-                            display: block;
-                        }
                         .link-icon{
-                            width:2.5000vw;
-                            height:2.5000vw;
-
-                            @include largeMobile{
-                                width:4.1721vw;
-                                height:4.1721vw;
-                            }
-                            @include smallMobile{
-                                width:6.6806vw;
-                                height:6.6806vw;
-                            }
+                            width: 3rem;
+                            height: 3rem;
                         }
-
                     }
-                }
-
             }
 
             .stamp{
