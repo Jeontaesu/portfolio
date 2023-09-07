@@ -40,3 +40,8 @@ body {
     line-height:1.5;
     letter-spacing:-.065rem;
 }
+body::-webkit-scrollbar {
+   display: none;
+}
+
+

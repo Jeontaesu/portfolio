@@ -89,19 +89,28 @@ $('.project-title').each(function(a,b){
   gsap.to($(this).find('.title'), {
     scrollTrigger:{
       trigger:b,
-      start:"-60% 40%",
-      end:"90% 0%",
+      start:"-60% 20%",
+      end:"100% 0%",
       scrub:1,
-    //   markers:true,
     },
-      x:-200,
-      stagger:0.2
-    
+        x:-200,
     })  
 
 })
 
 
+
+// smooth scroll
+gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 
 })
