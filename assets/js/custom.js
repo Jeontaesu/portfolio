@@ -67,10 +67,8 @@ $('.gnb-item .linkAbout').click(function(e){
 $('.gnb-item .linkContact').click(function(e){
     e.preventDefault();
 
-    var position = $('.footer').offset(); //선택한 태그의 위치를 반환
+    var position = $('.footer').offset(); 
     $('html').animate({scrollTop : position.top}, 500);
-    //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
-
 });
 
 
@@ -91,14 +89,16 @@ $('.project-title').each(function(a,b){
   gsap.to($(this).find('.title'), {
     scrollTrigger:{
       trigger:b,
-      start:"-40% 40%",
-      end:"90% 20%",
+      start:"-60% 40%",
+      end:"90% 0%",
       scrub:1,
     //   markers:true,
     },
       x:-200,
+      stagger:0.2
     
     })  
+
 })
 
 

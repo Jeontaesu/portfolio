@@ -310,7 +310,6 @@ img {
   margin-left: -1.875vw;
   white-space: nowrap;
   font-size: clamp(1.25rem, 1.25rem + 20vw, 62.4375rem);
-  line-height: 1;
   letter-spacing: -1.625vw;
   -webkit-user-select: none;
      -moz-user-select: none;
