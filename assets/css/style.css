@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
 @font-face {
+  font-family: "PxGrotesk";
   font-weight: 400;
   src: url(../font/Px-Grotesk-light.woff2) format("woff2");
 }
@@ -13,6 +14,16 @@
   font-family: "pretendard";
   font-weight: 400;
   src: url(../font/PretendardVariable.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Neuehaasdisplay";
+  font-weight: 400;
+  src: url(../font/NeueHaasDisplay-Roman.woff) format("woff");
+}
+@font-face {
+  font-family: "Neuehaasdisplay";
+  font-weight: 600;
+  src: url(../font/NeueHaasDisplay-Mediu.woff) format("woff");
 }
 * {
   margin: 0;
@@ -726,7 +737,7 @@ img {
   .gnb .gnb-item .linkAbout {
     display: none;
   }
-  .gnb .gnb-item .linkContact {
+  .gnb .gnb-item .linkVelog {
     -webkit-box-shadow: inset 0 0 0 0.2rem #fff;
             box-shadow: inset 0 0 0 0.2rem #fff;
     border-radius: 50%;
@@ -874,6 +885,8 @@ img {
   /* project-3rd */
   /* project-4th */
   /* project-5th */
+  /* orhter project */
+  /* avatar-profile */
 }
 .App-main .sc-project.project-1st .frame-about {
   position: relative;
@@ -1256,4 +1269,132 @@ img {
 }
 .App-main .sc-project.project-5th .frame-project .stamp .stamp-inner {
   inset: -5rem 0 0 -25vw;
+}
+.App-main .sc-orther {
+  margin-top: 12rem;
+  font-family: Neuehaasdisplay, pretendard, sans-serif;
+}
+.App-main .sc-orther .orther-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3.7rem 7rem;
+  font-size: var(--font-size-sm-1);
+}
+@media (max-width: 1024px) {
+  .App-main .sc-orther .orther-head {
+    padding: 0 3rem 4rem;
+  }
+}
+.App-main .sc-orther .orther-head:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  background: #fe330a;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.App-main .sc-orther .orther-list {
+  line-height: 1;
+}
+.App-main .sc-orther .orther-list .orther-item {
+  position: relative;
+  -webkit-box-shadow: inset 0 -1px 0 #b2b2b2;
+          box-shadow: inset 0 -1px 0 #b2b2b2;
+}
+.App-main .sc-orther .orther-list .orther-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: #ff9831;
+  z-index: -1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.App-main .sc-orther .orther-list .orther-item:hover:before {
+  content: "";
+  height: 100%;
+}
+.App-main .sc-orther .orther-list .orther-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.2rem 3.7rem;
+}
+@media (max-width: 1024px) {
+  .App-main .sc-orther .orther-list .orther-item a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem 3rem;
+  }
+}
+.App-main .sc-orther .orther-list .orther-item .title {
+  display: block;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+.App-main .sc-orther .orther-list .orther-item .title .mo-br {
+  display: none;
+}
+@media (max-width: 1527px) {
+  .App-main .sc-orther .orther-list .orther-item .title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1140px) {
+  .App-main .sc-orther .orther-list .orther-item .title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .App-main .sc-orther .orther-list .orther-item .title {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .App-main .sc-orther .orther-list .orther-item .title {
+    font-size: 2.8rem;
+  }
+  .App-main .sc-orther .orther-list .orther-item .title .mo-br {
+    display: block;
+  }
+}
+.App-main .sc-orther .orther-list .orther-item .info {
+  text-align: right;
+}
+@media (max-width: 1024px) {
+  .App-main .sc-orther .orther-list .orther-item .info {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+.App-main .sc-orther .orther-list .orther-item .info .date {
+  color: #fe330a;
+  font-size: 1.6rem;
+}
+.App-main .sc-orther .orther-list .orther-item .info .desc {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
 }

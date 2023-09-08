@@ -38,39 +38,45 @@ $(function(){
       ease: Expo.easeInOut
   });
 
+     /**
+     * @smoothScroll
+     */
+     gsap.registerPlugin(ScrollTrigger);
+
+     const lenis = new Lenis();
+ 
+     function raf(time) {
+     lenis.raf(time);
+     requestAnimationFrame(raf);
+     }
+     requestAnimationFrame(raf);
+
 
   /**
    * @header_btn_wrap링크
    */
   
-$('.header-btn-wrap').click(function(){
+    $('.header-btn-wrap').click(function(){
 
-    var offset = $('.header-btn-wrap').offset(); //선택한 태그의 위치를 반환
+        var offset = $('.header-btn-wrap').offset(); //선택한 태그의 위치를 반환
 
-    $('html').animate({scrollTop : offset.top}, 400);
-    //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+        $('html').animate({scrollTop : offset.top}, 400);
+        //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
 
-});
+    });
 
 /**
  * @gnb_링크
  */
 
-$('.gnb-item .linkAbout').click(function(e){
-    e.preventDefault();
+    $('.gnb-item .linkAbout').click(function(e){
+        e.preventDefault();
 
-    var position = $('.about').offset(); //선택한 태그의 위치를 반환
-    $('html').animate({scrollTop : position.top}, 500);
-    //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
+        var position = $('.about').offset(); //선택한 태그의 위치를 반환
+        $('html').animate({scrollTop : position.top}, 500);
+        //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함
 
-});
-$('.gnb-item .linkContact').click(function(e){
-    e.preventDefault();
-
-    var position = $('.footer').offset(); 
-    $('html').animate({scrollTop : position.top}, 500);
-});
-
+    });
 
 
 
@@ -78,39 +84,24 @@ $('.gnb-item .linkContact').click(function(e){
  * @scroll_title 이벤트
  */
 
-ScrollTrigger.create({
-    trigger:".sc-project",
-    start:"0% 0%",
-    end:"100% 0%",
-    // markers:true,
-})
+    ScrollTrigger.create({
+        trigger:".sc-project",
+        start:"0% 0%",
+        end:"100% 0%",
+        // markers:true,
+    })
 
-$('.project-title').each(function(a,b){
-  gsap.to($(this).find('.title'), {
-    scrollTrigger:{
-      trigger:b,
-      start:"-60% 20%",
-      end:"100% 0%",
-      scrub:1,
-    },
-        x:-200,
-    })  
+    $('.project-title').each(function(a,b){
+    gsap.to($(this).find('.title'), {
+        scrollTrigger:{
+        trigger:b,
+        start:"-60% 20%",
+        end:"100% 0%",
+        scrub:1,
+        },
+            x:-200,
+        })  
 
-})
-
-
-
-// smooth scroll
-gsap.registerPlugin(ScrollTrigger);
-
-const lenis = new Lenis();
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
+    })
 
 })

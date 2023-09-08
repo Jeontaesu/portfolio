@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
 
 @font-face {
+    font-family: 'PxGrotesk';
     font-weight:400;
     src:url(../font/Px-Grotesk-light.woff2) format('woff2');
 }
@@ -15,6 +16,16 @@
     font-weight:400;
     src:url(../font/PretendardVariable.woff2)
     format('woff2');
+}
+@font-face{
+    font-family:'Neuehaasdisplay';
+    font-weight:400;
+    src:url(../font/NeueHaasDisplay-Roman.woff)format('woff');
+}
+@font-face{
+    font-family:'Neuehaasdisplay';
+    font-weight:600;
+    src:url(../font/NeueHaasDisplay-Mediu.woff)format('woff');
 }
 
 
