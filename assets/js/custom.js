@@ -101,7 +101,20 @@ $(function(){
         },
             x:-200,
         })  
-
     })
+
+
+
+/**
+ * @profile_box
+ */
+$(".avatar-profile").click(function(){
+    if($(".avatar-profile-box").hasClass("on")){
+        $(".avatar-profile-box").removeClass("on");
+    } else{
+        $(".avatar-profile-box").addClass("on");
+    }
+});
+
 
 })
