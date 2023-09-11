@@ -604,7 +604,7 @@ font-family:'pretendard' , sans-serif;
 .avatar-profile-box{
     position: fixed;
     right: 27px;
-    bottom: 125px;
+    bottom: 35px;
     width: 39rem;
     max-height:70.7rem;
     z-index:20000;
@@ -622,12 +622,12 @@ font-family:'pretendard' , sans-serif;
 
 
     @include smallMobile {
-        top: 0;
         right: 0;
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 100vh;
+        max-height: 93%;
+        border-radius:1rem 1rem 0 0;
     }
 
     @keyframes close {
@@ -658,13 +658,14 @@ font-family:'pretendard' , sans-serif;
     }
 
     .avatar-head{
-        padding:1rem 0;
+        padding:1.5rem 0;
         border-bottom:1px solid #ddd;
     
         h2 {
             font-weight:bold;
             font-size:1.5rem;
             text-align:center;
+            line-height: 1;
         }
     }
     
@@ -672,7 +673,6 @@ font-family:'pretendard' , sans-serif;
         padding:2rem;
         height:calc(100% - 2.8rem);
         width: 100%;
-        overflow: hidden;
         overflow-y:scroll;
 
         &::-webkit-scrollbar {
@@ -732,4 +732,52 @@ font-family:'pretendard' , sans-serif;
             }
         }
     } 
+    //close-btn
+     .close-btn-wrap{
+        position: absolute;
+        left: 2rem;
+        top: 1.5rem;
+        display: flex;
+        align-items:center;
+
+        li{
+            width: 15px;
+            height: 15px;
+            position: relative;
+            border-radius:50%;
+            margin-right: .5rem;
+            border:1px solid #ddd;
+
+            &:first-child{
+                border:none;
+                background:#ea4335;
+            }
+
+            .btn-close{
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                &:before{
+                    content: "\00d7";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform:translate(-50%, -50%);
+                    font-size:13px;
+                    color:#ea4335;
+
+                    @include smallMobile{
+                        color:#fff;
+                    }
+                }
+
+                &:hover:before {
+                    content:"\00d7";
+                    color:#fff;
+                }
+            }
+        }
+     }
 }
