@@ -116,4 +116,6 @@ $('.avatar-profile-box .close-btn-wrap .btn-close').click(function(){
     $('.avatar-profile-box').removeClass('on');
 })
 
+$('.avatar-profile-box').off('scroll touchmove mousewheel');
+
 })
