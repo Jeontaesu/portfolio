@@ -885,7 +885,7 @@ img {
   /* project-3rd */
   /* project-4th */
   /* project-5th */
-  /* orhter project */
+  /* ohter project */
 }
 .App-main .sc-project.project-1st .frame-about {
   position: relative;
@@ -1269,11 +1269,11 @@ img {
 .App-main .sc-project.project-5th .frame-project .stamp .stamp-inner {
   inset: -5rem 0 0 -25vw;
 }
-.App-main .sc-orther {
+.App-main .sc-other {
   margin-top: 12rem;
   font-family: Neuehaasdisplay, pretendard, sans-serif;
 }
-.App-main .sc-orther .orther-head {
+.App-main .sc-other .other-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1284,11 +1284,11 @@ img {
   font-size: var(--font-size-sm-1);
 }
 @media (max-width: 1024px) {
-  .App-main .sc-orther .orther-head {
+  .App-main .sc-other .other-head {
     padding: 0 3rem 4rem;
   }
 }
-.App-main .sc-orther .orther-head:before {
+.App-main .sc-other .other-head:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -1298,15 +1298,15 @@ img {
   border-radius: 50%;
   margin-right: 1rem;
 }
-.App-main .sc-orther .orther-list {
+.App-main .sc-other .other-list {
   line-height: 1;
 }
-.App-main .sc-orther .orther-list .orther-item {
+.App-main .sc-other .other-list .other-item {
   position: relative;
   -webkit-box-shadow: inset 0 -1px 0 #b2b2b2;
           box-shadow: inset 0 -1px 0 #b2b2b2;
 }
-.App-main .sc-orther .orther-list .orther-item:before {
+.App-main .sc-other .other-list .other-item:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1317,11 +1317,11 @@ img {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.App-main .sc-orther .orther-list .orther-item:hover:before {
+.App-main .sc-other .other-list .other-item:hover:before {
   content: "";
   height: 100%;
 }
-.App-main .sc-orther .orther-list .orther-item a {
+.App-main .sc-other .other-list .other-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1334,7 +1334,7 @@ img {
   padding: 3.2rem 3.7rem;
 }
 @media (max-width: 1024px) {
-  .App-main .sc-orther .orther-list .orther-item a {
+  .App-main .sc-other .other-list .other-item a {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1345,7 +1345,7 @@ img {
     padding: 2rem 3rem;
   }
 }
-.App-main .sc-orther .orther-list .orther-item .title {
+.App-main .sc-other .other-list .other-item .title {
   display: block;
   font-size: 6rem;
   font-weight: 600;
@@ -1353,39 +1353,39 @@ img {
   text-align: center;
 }
 @media (max-width: 1527px) {
-  .App-main .sc-orther .orther-list .orther-item .title {
+  .App-main .sc-other .other-list .other-item .title {
     font-size: 5rem;
   }
 }
 @media (max-width: 1140px) {
-  .App-main .sc-orther .orther-list .orther-item .title {
+  .App-main .sc-other .other-list .other-item .title {
     font-size: 4rem;
   }
 }
 @media (max-width: 768px) {
-  .App-main .sc-orther .orther-list .orther-item .title {
+  .App-main .sc-other .other-list .other-item .title {
     font-size: 3.5rem;
   }
 }
 @media (max-width: 480px) {
-  .App-main .sc-orther .orther-list .orther-item .title {
+  .App-main .sc-other .other-list .other-item .title {
     font-size: 2.8rem;
   }
 }
-.App-main .sc-orther .orther-list .orther-item .info {
+.App-main .sc-other .other-list .other-item .info {
   text-align: right;
 }
 @media (max-width: 1024px) {
-  .App-main .sc-orther .orther-list .orther-item .info {
+  .App-main .sc-other .other-list .other-item .info {
     text-align: center;
     margin-top: 1rem;
   }
 }
-.App-main .sc-orther .orther-list .orther-item .info .date {
+.App-main .sc-other .other-list .other-item .info .date {
   color: #fe330a;
   font-size: 1.6rem;
 }
-.App-main .sc-orther .orther-list .orther-item .info .desc {
+.App-main .sc-other .other-list .other-item .info .desc {
   color: rgba(0, 0, 0, 0.6);
   font-size: 1.6rem;
   margin-top: 1rem;
