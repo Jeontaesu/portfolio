@@ -108,5 +108,11 @@ $(function () {
     $(".avatar-profile-box").removeClass("on");
   });
 
-  $(".avatar-profile-box").on("scroll touchmove mousewheel");
+  $(".avatar-profile-box").off("scroll touchmove");
+
+  $(".avatar-con").on("mousewheel DOMMouseScroll", function (e) {
+    e.preventDefault();
+    var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+    $(this).scrollTop($(this).scrollTop() - delta);
+  });
 });
