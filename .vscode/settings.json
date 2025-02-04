@@ -1,0 +1,85 @@
+{
+  "workbench.colorTheme": "Default Dark Modern",
+  "tabnine.experimentalAutoImports": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "liveSassCompile.settings.forceBaseDirectory": "",
+  "liveSassCompile.settings.includeItems": ["assets/scss/*.scss"],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    // This is Default.
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
+  "liveSassCompile.settings.useNewCompiler": false,
+  "liveSassCompile.settings.autoprefix": [],
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "json.schemas": [],
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "prettier.printWidth": 500,
+  "prettier.resolveGlobalModules": true,
+  "prettier.proseWrap": "always",
+  "redhat.telemetry.enabled": true,
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ],
+  "scss.implicitlyLabel": "",
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline"
+    },
+    "prettyhtml": {
+      "printWidth": 500,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.minimap.enabled": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.port": 0,
+  "liveServer.settings.host": "192.168.10.186",
+
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "'Iosevka Medium','Cascadia Code'",
+  "editor.fontLigatures": true,
+  "editor.mouseWheelZoom": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.colorDecorators": true,
+  "editor.codeLens": false,
+  "workbench.iconTheme": "vscode-icons",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "tailwind-fold.autoFold": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.settings.applyToAllProfiles": ["editor.tabSize"],
+  "editor.dropIntoEditor.preferences": [],
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true
+}

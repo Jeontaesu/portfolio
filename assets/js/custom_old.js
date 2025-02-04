@@ -96,83 +96,23 @@ $(function () {
       x: -200,
     });
   });
-});
 
-/**
- * @profile_box
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const avatarProfile = document.querySelector(".avatar-profile");
-  const avatarProfileBox = document.querySelector(".avatar-profile-box");
-  const closeBtn = document.querySelector(".avatar-profile-box .close-btn-wrap .btn-close");
-  const avatarCon = document.querySelector(".avatar-con");
-
-  // 현재 스크롤 위치 저장 변수
-  let scrollPosition = 0;
-
-  // 모달 내부 스크롤 관련 변수
-  let startY;
-
-  // 프로필 아바타 클릭 시 박스 표시
-  avatarProfile.addEventListener("click", () => {
-    // 현재 스크롤 위치 저장
-    scrollPosition = window.scrollY;
-
-    avatarProfileBox.classList.add("on");
-
-    // 스크롤 방지
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = "100%";
+  /**
+   * @profile_box
+   */
+  $(".avatar-profile").click(function () {
+    $(".avatar-profile-box").addClass("on");
   });
 
-  // 닫기 버튼 클릭 시 박스 숨김
-  closeBtn.addEventListener("click", () => {
-    avatarProfileBox.classList.remove("on");
-
-    // 스크롤 복원
-    document.body.style.overflow = "auto";
-    document.body.style.position = "static";
-    document.body.style.top = "0";
-    document.body.style.width = "auto";
-
-    // 이전 스크롤 위치로 복원
-    window.scrollTo(0, scrollPosition);
+  $(".avatar-profile-box .close-btn-wrap .btn-close").click(function () {
+    $(".avatar-profile-box").removeClass("on");
   });
 
-  // 터치 시작 이벤트
-  avatarCon.addEventListener(
-    "touchstart",
-    (e) => {
-      startY = e.touches[0].clientY;
-    },
-    { passive: true }
-  );
+  $(".avatar-profile-box").off("scroll touchmove");
 
-  // 터치 무브 이벤트
-  avatarCon.addEventListener(
-    "touchmove",
-    (e) => {
-      const currentY = e.touches[0].clientY;
-      const deltaY = currentY - startY;
-
-      // 컨테이너 스크롤 상단/하단 경계 체크
-      if ((deltaY > 0 && avatarCon.scrollTop === 0) || (deltaY < 0 && avatarCon.scrollTop + avatarCon.clientHeight >= avatarCon.scrollHeight)) {
-        e.preventDefault();
-      }
-
-      // 스크롤 업데이트
-      avatarCon.scrollTop -= deltaY;
-      startY = currentY;
-    },
-    { passive: false }
-  );
-
-  // 마우스 휠 스크롤 이벤트
-  avatarCon.addEventListener("wheel", (e) => {
+  $(".avatar-con").on("mousewheel DOMMouseScroll", function (e) {
     e.preventDefault();
-    const delta = e.deltaY;
-    avatarCon.scrollTop += delta;
+    var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+    $(this).scrollTop($(this).scrollTop() - delta);
   });
 });
