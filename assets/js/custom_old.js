@@ -116,3 +116,105 @@ $(function () {
     $(this).scrollTop($(this).scrollTop() - delta);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const avatarProfile = document.querySelector(".avatar-profile");
+  const avatarProfileBox = document.querySelector(".avatar-profile-box");
+  const closeBtn = document.querySelector(".avatar-profile-box .close-btn-wrap .btn-close");
+  const avatarCon = document.querySelector(".avatar-con");
+  const wrapper = document.querySelector("body > div"); // 최상위 래퍼 요소 선택
+
+  // 현재 스크롤 위치 저장 변수
+  let scrollPosition = 0;
+
+  // 모달 내부 스크롤 관련 변수
+  let startY;
+
+  // 프로필 아바타 클릭 시 박스 표시
+  avatarProfile.addEventListener("click", () => {
+    // 현재 스크롤 위치 저장
+    scrollPosition = window.scrollY;
+
+    avatarProfileBox.classList.add("on");
+
+    // 스크롤 방지 (wrapper 요소에 적용)
+    wrapper.style.position = "fixed";
+    wrapper.style.width = "100%";
+    wrapper.style.top = `-${scrollPosition}px`;
+
+    // body는 overflow만 처리
+    document.body.style.overflow = "hidden";
+  });
+
+  // 닫기 버튼 클릭 시 박스 숨김
+  closeBtn.addEventListener("click", () => {
+    avatarProfileBox.classList.remove("on");
+
+    // 스크롤 복원
+    wrapper.style.position = "";
+    wrapper.style.width = "";
+    wrapper.style.top = "";
+    document.body.style.overflow = "auto";
+
+    // 이전 스크롤 위치로 복원
+    window.scrollTo(0, scrollPosition);
+  });
+
+  // 커스텀 커서 위치 보정을 위한 함수
+  const adjustCursorPosition = (mousePos) => {
+    if (avatarProfileBox.classList.contains("on")) {
+      return {
+        x: mousePos.x,
+        y: mousePos.y + scrollPosition,
+      };
+    }
+    return mousePos;
+  };
+
+  // CursorFx 클래스 수정
+  class CursorFx {
+    constructor(el) {
+      // ... 기존 constructor 코드 ...
+    }
+
+    initEvents() {
+      window.addEventListener("mousemove", (ev) => {
+        const rawMousePos = getMousePos(ev);
+        this.mousePos = adjustCursorPosition(rawMousePos);
+      });
+    }
+
+    // ... 나머지 CursorFx 클래스 코드 ...
+  }
+
+  // 터치 이벤트 핸들러들...
+  avatarCon.addEventListener(
+    "touchstart",
+    (e) => {
+      startY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  avatarCon.addEventListener(
+    "touchmove",
+    (e) => {
+      const currentY = e.touches[0].clientY;
+      const deltaY = currentY - startY;
+
+      if ((deltaY > 0 && avatarCon.scrollTop === 0) || (deltaY < 0 && avatarCon.scrollTop + avatarCon.clientHeight >= avatarCon.scrollHeight)) {
+        e.preventDefault();
+      }
+
+      avatarCon.scrollTop -= deltaY;
+      startY = currentY;
+    },
+    { passive: false }
+  );
+
+  avatarCon.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    const delta = e.deltaY;
+    avatarCon.scrollTop += delta;
+  });
+});

@@ -767,3 +767,28 @@
     }
   }
 }
+
+/* cursor */
+.cursor {
+  &__inner {
+    z-index: 999999;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 	mix-blend-mode: difference; */
+    border-radius: 50%;
+    &--dot {
+      width: 10px;
+      height: 10px;
+      background: #222;
+    }
+    &--circle {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.5);
+      mix-blend-mode: exclusion;
+      background: radial-gradient(circle, #fff 0%, #fff 0%, #000 0%, #000 60%, #fff 50%, #fff 100%);
+    }
+  }
+}
