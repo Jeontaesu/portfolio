@@ -1,5 +1,5 @@
 # ✅ 포트폴리오 사이트.
-:octocat: 바로가기 : https://light9639.github.io/NaverClone/
+:octocat: 바로가기 : https://jeontaesu.github.io/portfolio/
 
 <!-- <img src="https://github.com/light9639/NaverClone/assets/95972251/0103b5b5-5227-41eb-acb4-c350fc5a94b5" alt="Naver" /><br/> -->
 
