@@ -832,7 +832,9 @@
     &--dot {
       width: 10px;
       height: 10px;
-      background: #222;
+      // background: #222;
+      mix-blend-mode: exclusion;
+      background: radial-gradient(circle, #fff 60%, #fff 0%, #000 0%, #000 60%, #fff 50%, #fff 100%);
     }
     &--circle {
       width: 50px;
