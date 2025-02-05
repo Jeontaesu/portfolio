@@ -729,7 +729,7 @@ img {
   background: #f5eddb;
 }
 .App-main .sc {
-  /* ohter project */
+  /* other project */
 }
 .App-main .sc-project {
   /* project-1st */
@@ -737,6 +737,7 @@ img {
   /* project-3rd */
   /* project-4th */
   /* project-5th */
+  /* project-6th */
 }
 .App-main .sc-project.project-1st .frame-about {
   position: relative;
@@ -1106,6 +1107,50 @@ img {
 .App-main .sc-project.project-5th .frame-project .stamp .stamp-inner {
   inset: -5rem 0 0 -25vw;
 }
+.App-main .sc-project.project-6th .frame-project .project-visual.common-inner {
+  padding-left: 0;
+}
+@media (max-width: 1024px) {
+  .App-main .sc-project.project-6th .frame-project .project-visual.common-inner {
+    padding-right: 0;
+  }
+}
+.App-main .sc-project.project-6th .frame-project .project-visual .project-figure {
+  grid-column: span 6;
+}
+.App-main .sc-project.project-6th .frame-project .project-visual .project-figure .project-img {
+  inset: -1rem -35vw 0 auto;
+  width: 65.5833vw;
+}
+@media (max-width: 1140px) {
+  .App-main .sc-project.project-6th .frame-project .project-visual .project-figure .project-img {
+    width: 75.7018vw;
+  }
+}
+@media (max-width: 1024px) {
+  .App-main .sc-project.project-6th .frame-project .project-visual .project-figure .project-img {
+    width: 75.7018vw;
+  }
+}
+@media (max-width: 900px) {
+  .App-main .sc-project.project-6th .frame-project .project-visual .project-figure .project-img {
+    width: 75.7018vw;
+  }
+}
+@media (max-width: 768px) {
+  .App-main .sc-project.project-6th .frame-project .project-visual .project-figure .project-img {
+    inset: 3rem -50vw 0 auto;
+    width: 80.7018vw;
+  }
+}
+.App-main .sc-project.project-6th .frame-project .project-content {
+  grid-column-start: 11;
+  grid-column-end: -1;
+  align-self: center;
+}
+.App-main .sc-project.project-6th .frame-project .stamp .stamp-inner {
+  inset: -5rem 0 0 -25vw;
+}
 .App-main .sc-other {
   margin-top: 12rem;
   font-family: Neuehaasdisplay, pretendard, sans-serif;
@@ -1418,6 +1463,11 @@ img {
 }
 
 /* cursor */
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
 .cursor__inner {
   z-index: 999999;
   pointer-events: none;
