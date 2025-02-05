@@ -1,9 +1,9 @@
-# ✅ Naver사이트 클론코딩.
+# ✅ 포트폴리오 사이트.
 :octocat: 바로가기 : https://light9639.github.io/NaverClone/
 
 <!-- <img src="https://github.com/light9639/NaverClone/assets/95972251/0103b5b5-5227-41eb-acb4-c350fc5a94b5" alt="Naver" /><br/> -->
 
-✨ 클론코딩 및 실무프로젝트 리스트를 나열한 포트폴리오 사이트입니다 ✨
+✨ 개인 클론코딩 및 실무프로젝트 리스트를 나열한 포트폴리오 사이트입니다 ✨
 ## :dart: 개발 목적
 - 클론코딩을 통한 기술향상 및 실무에서 경험한 프로젝트들을 정리하기 위해 제작했습니다.
 ## :black_nib: 구현기능
