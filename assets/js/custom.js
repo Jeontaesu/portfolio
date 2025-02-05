@@ -100,6 +100,7 @@ $(function () {
 
 /**
  * @profile_box
+ * @mouseCursor
  */
 document.addEventListener("DOMContentLoaded", () => {
   const avatarProfile = document.querySelector(".avatar-profile");
@@ -275,9 +276,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/**
- * @mouse_cursor
- */
 // {
 //   // Some help functions.
 
