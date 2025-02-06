@@ -1161,6 +1161,9 @@ img {
   padding: 0 3.7rem 7rem;
   font-size: var(--font-size-sm-1);
 }
+.App-main .sc-other .other-head strong {
+  font-weight: 700;
+}
 @media (max-width: 1024px) {
   .App-main .sc-other .other-head {
     padding: 0 3rem 4rem;
@@ -1182,6 +1185,10 @@ img {
 .App-main .sc-other .other-list .other-item {
   position: relative;
   box-shadow: inset 0 -1px 0 #b2b2b2;
+}
+.App-main .sc-other .other-list .other-item:hover .other-item__img {
+  opacity: 1;
+  transform: translateY(-50%) scale(1) skew(0deg) rotate(-15deg);
 }
 .App-main .sc-other .other-list .other-item:before {
   content: "";
@@ -1255,6 +1262,20 @@ img {
   font-size: 1.6rem;
   margin-top: 1rem;
   letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+.App-main .sc-other .other-list .other-item__img {
+  position: absolute;
+  top: 50%;
+  right: 50rem;
+  bottom: auto;
+  left: auto;
+  width: 20rem;
+  opacity: 0;
+  transform: translateY(-50%) scale(0.7) skew(0deg) rotate(10deg);
+  transition: opacity 0.3s, transform 0.5s cubic-bezier(0.3, 0.68, 0.34, 0.8);
+  z-index: 1;
+  filter: drop-shadow(0.2rem 0.2rem 0.37rem #000);
 }
 
 /* avatar-profile */
