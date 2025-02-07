@@ -6,7 +6,7 @@
   z-index: 1111;
   display: flex;
   .bar {
-    width: 11vw;
+    width: 12vw;
     height: 105vh;
     background: #1a1a1a;
   }
@@ -24,6 +24,9 @@
   font-size: 18vw;
   font-weight: 700;
   font-family: "TTTogether";
+  @include largeMobile {
+    font-size: 20vw;
+  }
 }
 
 //App-main ~

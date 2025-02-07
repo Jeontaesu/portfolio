@@ -688,7 +688,7 @@ img {
 }
 @media (max-width: 480px) {
   .footer {
-    font-size: 3.1315vw;
+    font-size: 4.1315vw;
   }
 }
 .footer .foot-inner {
@@ -717,6 +717,9 @@ img {
   display: flex;
   gap: 2rem;
 }
+.footer .foot-inner .foot-menu li {
+  padding: 1vw;
+}
 @media (max-width: 768px) {
   .footer .foot-inner .foot-menu {
     flex-direction: column;
@@ -735,7 +738,7 @@ img {
   display: flex;
 }
 .overlay .bar {
-  width: 11vw;
+  width: 12vw;
   height: 105vh;
   background: #1a1a1a;
 }
@@ -753,6 +756,11 @@ img {
   font-size: 18vw;
   font-weight: 700;
   font-family: "TTTogether";
+}
+@media (max-width: 768px) {
+  .counter {
+    font-size: 20vw;
+  }
 }
 
 .App-main {
