@@ -18,28 +18,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
 
-  <script src="./assets/js/common.js"></script>
+  <script defer src="./assets/js/common.js"></script>
   <script defer src="./assets/js/custom.js"></script>
 </head>
 
 <body>
-  <!-- <div class="loader">
-      <marquee direction="right" scrollamount="10"
-        >This is the portfolio of web-loving UI developer Jeon Taesu</marquee
-      >
-      <marquee direction="left" scrollamount="30"
-        >This is the portfolio of web-loving UI developer Jeon Taesu</marquee
-      >
-      <marquee direction="right" scrollamount="20"
-        >This is the portfolio of web-loving UI developer Jeon Taesu</marquee
-      >
-      <marquee direction="" scrollamount="40"
-        >This is the portfolio of web-loving UI developer Jeon Taesu</marquee
-      >
-      <div class="intro">
-        <h1 class="intro-title">jeon tae su</h1>
-      </div>
-    </div> -->
+  <h1 class="counter">0</h1>
+
+  <div class="overlay">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 
   <div id="wrapper">
     <header class="header">
@@ -515,7 +512,7 @@
               <strong class="title">JBBank</strong>
               <div class="info">
                 <em class="date">2023</em>
-                <p class="desc">전북은행 운영,이벤트페이지</p>
+                <p class="desc">전북은행 운영,이벤트페이지 퍼블리싱,<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/jbBank.png" alt="전북은행"></div>
             </a>
@@ -525,7 +522,7 @@
               <strong class="title">BEST24MALL</strong>
               <div class="info">
                 <em class="date">2021</em>
-                <p class="desc">베스트 이사몰 구축</p>
+                <p class="desc">베스트 이사몰 구축<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/best24.png" alt="베스트이사몰"></div>
             </a>
@@ -535,7 +532,7 @@
               <strong class="title">CNPTSTUDIO</strong>
               <div class="info">
                 <em class="date">2021</em>
-                <p class="desc">청년피티</p>
+                <p class="desc">청년피티<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/cnpt.png" alt="청년피티"></div>
             </a>
@@ -545,7 +542,7 @@
               <strong class="title">ROOBEELAC</strong>
               <div class="info">
                 <em class="date">2022</em>
-                <p class="desc">루비락</p>
+                <p class="desc">루비락<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/roobeelac.png" alt="루비락"></div>
             </a>
@@ -555,7 +552,7 @@
               <strong class="title">BK ENERGY</strong>
               <div class="info">
                 <em class="date">2021</em>
-                <p class="desc">비케이에너지</p>
+                <p class="desc">비케이에너지<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/bk_energy.png" alt="비케이에너지"></div>
             </a>
@@ -565,7 +562,7 @@
               <strong class="title">NF SUMMIT SQUARE</strong>
               <div class="info">
                 <em class="date">2022</em>
-                <p class="desc">엔에프케이씨</p>
+                <p class="desc">엔에프케이씨<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/nfsummit.png" alt="엔에프케이씨"></div>
             </a>
@@ -575,7 +572,7 @@
               <strong class="title">den.B</strong>
               <div class="info">
                 <em class="date">2021</em>
-                <p class="desc">덴탈비서</p>
+                <p class="desc">덴탈비서<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/denB.png" alt="덴탈비서"></div>
             </a>
@@ -585,7 +582,7 @@
               <strong class="title">ETI</strong>
               <div class="info">
                 <em class="date">2022</em>
-                <p class="desc">한국교통대 유라시아교통연구소</p>
+                <p class="desc">한국교통대 유라시아교통연구소<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/eti.png" alt="한국교통대 유라시아교통연구소"></div>
             </a>
@@ -595,7 +592,7 @@
               <strong class="title">UIQ</strong>
               <div class="info">
                 <em class="date">2020</em>
-                <p class="desc">유이크</p>
+                <p class="desc">유이크<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/uiq.png" alt="유이크"></div>
             </a>
@@ -605,7 +602,7 @@
               <strong class="title">WHAT BASEBALL</strong>
               <div class="info">
                 <em class="date">2021</em>
-                <p class="desc">왓베이스볼</p>
+                <p class="desc">왓베이스볼<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/whatbaseball.png" alt="왓베이스볼"></div>
             </a>
@@ -615,7 +612,7 @@
               <strong class="title">ILLUD</strong>
               <div class="info">
                 <em class="date">2020</em>
-                <p class="desc">일루디</p>
+                <p class="desc">일루디<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/illud.png" alt="일루디"></div>
             </a>
@@ -625,7 +622,7 @@
               <strong class="title">MONSTER TAX</strong>
               <div class="info">
                 <em class="date">2022</em>
-                <p class="desc">몬스터택스</p>
+                <p class="desc">몬스터택스<br>기여도: 100%</p>
               </div>
               <!-- <div class="other-item__img"><img src="./assets/images/nfsummit.png" alt="엔에프케이씨"></div> -->
             </a>
@@ -635,7 +632,7 @@
               <strong class="title">ROASTERY CIGOL</strong>
               <div class="info">
                 <em class="date">2022</em>
-                <p class="desc">시골커피</p>
+                <p class="desc">시골커피<br>기여도: 100%</p>
               </div>
               <div class="other-item__img"><img src="./assets/images/roastery_cigol.png" alt="시골커피"></div>
             </a>

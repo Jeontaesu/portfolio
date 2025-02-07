@@ -1,5 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "TTTogether";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff") format("woff");
+}
 @font-face {
   font-family: "PxGrotesk";
   font-weight: 400;
@@ -722,6 +725,34 @@ img {
 }
 .footer .foot-inner .foot-copy {
   text-align: right;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1111;
+  display: flex;
+}
+.overlay .bar {
+  width: 11vw;
+  height: 105vh;
+  background: #1a1a1a;
+}
+
+.counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 11111;
+  color: #bcbcc4;
+  padding: 0.2em 0.4em;
+  font-size: 18vw;
+  font-weight: 700;
+  font-family: "TTTogether";
 }
 
 .App-main {

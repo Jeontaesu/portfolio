@@ -1,44 +1,5 @@
 $(function () {
   /**
-   * @loadPage_인트로
-   */
-  // var textWrapper = document.querySelector(".intro-title");
-  // textWrapper.innerHTML = textWrapper.textContent.replace(
-  //   /([^\x00-\x80]|\w)/g,
-  //   "<span class='letter'>$&</span>"
-  // );
-
-  // anime
-  //   .timeline({ loop: false })
-  //   .add({
-  //     targets: ".intro-title .letter",
-  //     translateX: [140, 0],
-  //     translateZ: 0,
-  //     opacity: [0, 1],
-  //     easing: "easeOutExpo",
-  //     duration: 600,
-  //     delay: function (el, i) {
-  //       return 500 + 50 * i;
-  //     },
-  //   })
-  //   .add({
-  //     targets: ".intro-title .letter",
-  //     translateX: [0, -140],
-  //     opacity: [1, 0],
-  //     easing: "easeInExpo",
-  //     duration: 700,
-  //     delay: function (el, i) {
-  //       return 700 + 50 * i;
-  //     },
-  //   });
-
-  // TweenMax.to(".loader", 2.2, {
-  //   delay: 1.3,
-  //   top: "-100%",
-  //   ease: Expo.easeInOut,
-  // });
-
-  /**
    * @smoothScroll
    */
   gsap.registerPlugin(ScrollTrigger);
@@ -107,18 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const avatarProfileBox = document.querySelector(".avatar-profile-box");
   const closeBtn = document.querySelector(".avatar-profile-box .close-btn-wrap .btn-close");
   const avatarCon = document.querySelector(".avatar-con");
-  const wrapper = document.querySelector("body > div");
+  const wrapper = document.querySelector("#wrapper");
 
   // 현재 스크롤 위치 저장 변수
   let scrollPosition = 0;
-
-  // 모달 내부 스크롤 관련 변수
-  let startY;
+  let isModalOpen = false; // 모달 상태를 추적하는 변수 추가
 
   // 프로필 아바타 클릭 시 박스 표시
   avatarProfile.addEventListener("click", () => {
     // 현재 스크롤 위치 저장
     scrollPosition = window.scrollY;
+    isModalOpen = true; //모달 열림 상태 설정
 
     avatarProfileBox.classList.add("on");
 
@@ -275,8 +235,3 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => cursor.click());
   });
 });
-
-// {
-//   // Some help functions.
-
-// }
